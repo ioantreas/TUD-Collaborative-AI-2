@@ -251,6 +251,15 @@ class TemplateAgent(DefaultParty):
         agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(all_bids)
         if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 50:
             return self.sent_bids[-1][0]
+        if self.progress.get(time() * 1000) > 98:
+            max = 0
+            bid = None
+            for b, t in self.received_bids:
+                cu = self.profile.getUtility(b)
+                if cu > max:
+                    bid = b
+                    max = cu
+            return bid
         utility_diff = (self.opponent_utilities[-2] - self.opponent_utilities[-1]) / (self.opponent_utilities[-2] - opponent_utility_nash)
         if agent_utility_nash == self.agent_utilities[-1]:
             return self.sent_bids[-1][0]
