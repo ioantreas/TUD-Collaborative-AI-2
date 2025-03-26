@@ -22,7 +22,7 @@ settings = {
             # "parameters": {"storage_dir": "agent_storage/DreamTeam109Agent"},
             # "class": "agents.stupid_agent.stupid_agent.StupidAgent",
             # "parameters": {"storage_dir": "agent_storage/stupid_agent"},
-            "class": "agents.CSE3210.agent11.agent11.Agent11",
+            "class": "agents.CSE3210.agent18.agent18.Agent18",
         },
         {
             "class": "agents.group22_agent.group22_agent.TemplateAgent",
@@ -30,7 +30,7 @@ settings = {
         },
     ],
     "profiles": ["domains/domain00/profileA.json", "domains/domain00/profileB.json"],
-    "deadline_time_ms": 10000,
+    "deadline_time_ms": 2000,
 }
 
 # run a session and obtain results in dictionaries
