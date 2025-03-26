@@ -21,15 +21,15 @@ tournament_settings = {
             "class": "agents.group22_agent.group22_agent.TemplateAgent",
             "parameters": {"storage_dir": "agent_storage/group22_agent"},
         },
-        # {
-        #     "class": "agents.boulware_agent.boulware_agent.BoulwareAgent",
-        # },
+        {
+            "class": "agents.boulware_agent.boulware_agent.BoulwareAgent",
+        },
         # {
         #     "class": "agents.conceder_agent.conceder_agent.ConcederAgent",
         # },
-        # {
-        #     "class": "agents.hardliner_agent.hardliner_agent.HardlinerAgent",
-        # },
+        {
+            "class": "agents.hardliner_agent.hardliner_agent.HardlinerAgent",
+        },
         # {
         #     "class": "agents.linear_agent.linear_agent.LinearAgent",
         # },
@@ -40,35 +40,39 @@ tournament_settings = {
         #     "class": "agents.stupid_agent.stupid_agent.StupidAgent",
         # },
         {
+            "class": "agents.ANL2022.dreamteam109_agent.dreamteam109_agent.DreamTeam109Agent",
+            "parameters": {"storage_dir": "agent_storage/DreamTeam109Agent"},
+        },
+        {
             "class": "agents.CSE3210.agent2.agent2.Agent2",
         },
-        {
-            "class": "agents.CSE3210.agent3.agent3.Agent3",
-        },
-        {
-            "class": "agents.CSE3210.agent7.agent7.Agent7",
-        },
+        # {
+        #     "class": "agents.CSE3210.agent3.agent3.Agent3",
+        # },
+        # {
+        #     "class": "agents.CSE3210.agent7.agent7.Agent7",
+        # },
         {
             "class": "agents.CSE3210.agent11.agent11.Agent11",
         },
-        # {
-        #     "class": "agents.CSE3210.agent14.agent14.Agent14",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent18.agent18.Agent18",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent19.agent19.Agent19",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent22.agent22.Agent22",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent24.agent24.Agent24",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent25.agent25.Agent25",
-        # },
+        {
+            "class": "agents.CSE3210.agent14.agent14.Agent14",
+        },
+        {
+            "class": "agents.CSE3210.agent18.agent18.Agent18",
+        },
+        {
+            "class": "agents.CSE3210.agent19.agent19.Agent19",
+        },
+        {
+            "class": "agents.CSE3210.agent22.agent22.Agent22",
+        },
+        {
+            "class": "agents.CSE3210.agent24.agent24.Agent24",
+        },
+        {
+            "class": "agents.CSE3210.agent25.agent25.Agent25",
+        },
         # {
         #     "class": "agents.CSE3210.agent26.agent26.Agent26",
         # },
@@ -119,7 +123,7 @@ tournament_settings = {
         ["domains/domain00/profileA.json", "domains/domain00/profileB.json"],
         ["domains/domain01/profileA.json", "domains/domain01/profileB.json"],
     ],
-    "deadline_time_ms": 10000,
+    "deadline_time_ms": 1000,
 }
 
 # run a session and obtain results in dictionaries

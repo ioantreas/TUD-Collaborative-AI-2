@@ -239,7 +239,7 @@ class TemplateAgent(DefaultParty):
             # take 500 attempts to find a bid according to a heuristic score
             for _ in range(500):
                 bid = all_bids.get(randint(0, all_bids.size() - 1))
-                bid_score = self.score_bid(bid)
+                bid_score = self.profile.getUtility(bid)
                 if bid_score > 0.9:
                     return bid
                 if bid_score > best_bid_score:
@@ -249,9 +249,11 @@ class TemplateAgent(DefaultParty):
         best_bid = None
         smallest_diff = np.inf
         agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(all_bids)
+        if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 50:
+            return self.sent_bids[-1][0]
         utility_diff = (self.opponent_utilities[-2] - self.opponent_utilities[-1]) / (self.opponent_utilities[-2] - opponent_utility_nash)
         if agent_utility_nash == self.agent_utilities[-1]:
-            return None
+            return self.sent_bids[-1][0]
         for _ in range(500):
             bid = all_bids.get(randint(0, all_bids.size() - 1))
             bid_utility = self.profile.getUtility(bid)
