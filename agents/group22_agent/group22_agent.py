@@ -3,6 +3,7 @@ from random import randint
 from time import time
 from typing import cast
 from decimal import Decimal
+import numpy as np
 
 from geniusweb.actions.Accept import Accept
 from geniusweb.actions.Action import Action
@@ -51,6 +52,9 @@ class TemplateAgent(DefaultParty):
 
         self.last_received_bid: Bid = None
         self.received_bids: list[(Bid, float)] = []
+        self.sent_bids: list[(Bid, float)] = []
+        self.opponent_utilities = []
+        self.agent_utilities = []
         self.opponent_model: OpponentModel = None
         self.reservation_utility: Decimal = None
         self.logger.log(logging.INFO, "party is initialized")
@@ -167,12 +171,16 @@ class TemplateAgent(DefaultParty):
         """
         # check if the last received offer is good enough
         bid = self.find_bid()
+        if self.last_received_bid is not None:
+            self.opponent_utilities.append(Decimal(self.opponent_model.get_predicted_utility(self.last_received_bid)))
         if self.accept_condition(self.last_received_bid, bid):
             # if so, accept the offer
             action = Accept(self.me, self.last_received_bid)
         else:
             # if not, find a bid to propose as counter offer
             action = Offer(self.me, bid)
+            self.sent_bids.append((bid, self.progress.get(time() * 1000)))
+            self.agent_utilities.append(Decimal(self.profile.getUtility(bid)))
 
         # send the action
         self.received_bids.append((self.last_received_bid, self.progress.get(time() * 1000)))
@@ -200,7 +208,10 @@ class TemplateAgent(DefaultParty):
             current_utility = self.profile.getUtility(bid)
         if current_utility < reservation_utility:
             return False
-        next_utility = self.profile.getUtility(next_bid)
+        if next_bid is not None:
+            next_utility = self.profile.getUtility(next_bid)
+        else:
+            next_utility = 1
         ACnext_res = next_utility <= current_utility
         if ACnext_res:
             return True
@@ -215,36 +226,64 @@ class TemplateAgent(DefaultParty):
                 return current_utility >= max_utility
             return False
 
-        # if bid is None:
-        #     return False
-        #
-        # # progress of the negotiation session between 0 and 1 (1 is deadline)
-        # progress = self.progress.get(time() * 1000)
-        #
-        # # very basic approach that accepts if the offer is valued above 0.7 and
-        # # 95% of the time towards the deadline has passed
-        # conditions = [
-        #     self.profile.getUtility(bid) > 0.8,
-        #     progress > 0.95,
-        # ]
-        # return all(conditions)
-
     def find_bid(self) -> Bid:
         # compose a list of all possible bids
         domain = self.profile.getDomain()
         all_bids = AllBidsList(domain)
 
-        best_bid_score = 0.0
-        best_bid = None
+        if len(self.opponent_utilities) <= 1:
+            # use the utility of the first bid received
+            best_bid_score = 0.0
+            best_bid = None
 
-        # take 500 attempts to find a bid according to a heuristic score
+            # take 500 attempts to find a bid according to a heuristic score
+            for _ in range(500):
+                bid = all_bids.get(randint(0, all_bids.size() - 1))
+                bid_score = self.score_bid(bid)
+                if bid_score > 0.9:
+                    return bid
+                if bid_score > best_bid_score:
+                    best_bid_score, best_bid = bid_score, bid
+
+            return best_bid
+        best_bid = None
+        smallest_diff = np.inf
+        agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(all_bids)
+        utility_diff = (self.opponent_utilities[-2] - self.opponent_utilities[-1]) / (self.opponent_utilities[-2] - opponent_utility_nash)
+        if agent_utility_nash == self.agent_utilities[-1]:
+            return None
         for _ in range(500):
             bid = all_bids.get(randint(0, all_bids.size() - 1))
-            bid_score = self.score_bid(bid)
-            if bid_score > best_bid_score:
-                best_bid_score, best_bid = bid_score, bid
-
+            bid_utility = self.profile.getUtility(bid)
+            diff = (self.agent_utilities[-1] - bid_utility) / (self.agent_utilities[-1] - agent_utility_nash)
+            if abs(diff - utility_diff) < smallest_diff:
+                best_bid = bid
+                smallest_diff = abs(diff - utility_diff)
         return best_bid
+
+        # best_bid_score = 0.0
+        # best_bid = None
+        #
+        # # take 500 attempts to find a bid according to a heuristic score
+        # for _ in range(500):
+        #     bid = all_bids.get(randint(0, all_bids.size() - 1))
+        #     bid_score = self.score_bid(bid)
+        #     if bid_score > best_bid_score:
+        #         best_bid_score, best_bid = bid_score, bid
+        #
+        # return best_bid
+
+    def calculate_nash_point(self, all_bids):
+        nash_point = 0
+        agent_utility_nash, opponent_utility_nash = 0, 0
+        for _ in range(500):
+            bid = all_bids.get(randint(0, all_bids.size() - 1))
+            agent_score = self.profile.getUtility(bid)
+            opponent_score = Decimal(self.opponent_model.get_predicted_utility(bid))
+            if agent_score * opponent_score > nash_point:
+                nash_point = agent_score * opponent_score
+                agent_utility_nash, opponent_utility_nash = agent_score, opponent_score
+        return agent_utility_nash, opponent_utility_nash
 
     def score_bid(self, bid: Bid, alpha: float = 0.95, eps: float = 0.1) -> float:
         """Calculate heuristic score for a bid
