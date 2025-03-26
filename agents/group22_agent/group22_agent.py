@@ -219,12 +219,14 @@ class TemplateAgent(DefaultParty):
         else:
             progress = self.progress.get(time() * 1000)
             if progress > 0.98:
-                # Compare to the max of the previous 2%
-                max_utility = 0
-                for b, t in self.received_bids:
-                    if t > progress - (1-progress):
-                        max_utility = max(max_utility, self.profile.getUtility(b))
-                return current_utility >= max_utility
+                agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(self.sorted_bids)
+                return abs(agent_utility_nash-current_utility) <= 0.1
+                # # Compare to the max of the previous 2%
+                # max_utility = 0
+                # for b, t in self.received_bids:
+                #     if t > progress - (1-progress):
+                #         max_utility = max(max_utility, self.profile.getUtility(b))
+                # return current_utility >= max_utility
             return False
 
     def find_bid(self) -> Bid:
@@ -234,18 +236,6 @@ class TemplateAgent(DefaultParty):
             domain = self.profile.getDomain()
             self.all_bids = AllBidsList(domain)
             self.sorted_bids = sorted(self.all_bids, key=lambda x: self.profile.getUtility(x))
-            # use the utility of the first bid received
-            # best_bid_score = 0.0
-            # best_bid = None
-            #
-            # # take 500 attempts to find a bid according to a heuristic score
-            # for bid in self.sorted_bids[-10:-1]:
-            #     bid_score = self.profile.getUtility(bid)
-            #     if bid_score > 0.9:
-            #         return bid
-            #     if bid_score > best_bid_score:
-            #         best_bid_score, best_bid = bid_score, bid
-
             return self.sorted_bids[-1]
         best_bid = None
         smallest_diff = np.inf
