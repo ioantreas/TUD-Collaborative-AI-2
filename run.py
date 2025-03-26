@@ -18,10 +18,11 @@ if not RESULTS_DIR.exists():
 settings = {
     "agents": [
         {
-            "class": "agents.ANL2022.dreamteam109_agent.dreamteam109_agent.DreamTeam109Agent",
-            "parameters": {"storage_dir": "agent_storage/DreamTeam109Agent"},
+            # "class": "agents.ANL2022.dreamteam109_agent.dreamteam109_agent.DreamTeam109Agent",
+            # "parameters": {"storage_dir": "agent_storage/DreamTeam109Agent"},
             # "class": "agents.stupid_agent.stupid_agent.StupidAgent",
             # "parameters": {"storage_dir": "agent_storage/stupid_agent"},
+            "class": "agents.CSE3210.agent11.agent11.Agent11",
         },
         {
             "class": "agents.group22_agent.group22_agent.TemplateAgent",

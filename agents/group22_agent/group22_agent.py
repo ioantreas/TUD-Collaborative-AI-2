@@ -57,6 +57,7 @@ class TemplateAgent(DefaultParty):
         self.agent_utilities = []
         self.opponent_model: OpponentModel = None
         self.reservation_utility: Decimal = None
+        self.sorted_bids = []
         self.logger.log(logging.INFO, "party is initialized")
 
     def notifyChange(self, data: Inform):
@@ -228,30 +229,30 @@ class TemplateAgent(DefaultParty):
 
     def find_bid(self) -> Bid:
         # compose a list of all possible bids
-        domain = self.profile.getDomain()
-        all_bids = AllBidsList(domain)
 
         if len(self.opponent_utilities) <= 1:
+            domain = self.profile.getDomain()
+            self.all_bids = AllBidsList(domain)
+            self.sorted_bids = sorted(self.all_bids, key=lambda x: self.profile.getUtility(x))
             # use the utility of the first bid received
-            best_bid_score = 0.0
-            best_bid = None
+            # best_bid_score = 0.0
+            # best_bid = None
+            #
+            # # take 500 attempts to find a bid according to a heuristic score
+            # for bid in self.sorted_bids[-10:-1]:
+            #     bid_score = self.profile.getUtility(bid)
+            #     if bid_score > 0.9:
+            #         return bid
+            #     if bid_score > best_bid_score:
+            #         best_bid_score, best_bid = bid_score, bid
 
-            # take 500 attempts to find a bid according to a heuristic score
-            for _ in range(500):
-                bid = all_bids.get(randint(0, all_bids.size() - 1))
-                bid_score = self.profile.getUtility(bid)
-                if bid_score > 0.9:
-                    return bid
-                if bid_score > best_bid_score:
-                    best_bid_score, best_bid = bid_score, bid
-
-            return best_bid
+            return self.sorted_bids[-1]
         best_bid = None
         smallest_diff = np.inf
-        agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(all_bids)
-        if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 50:
+        agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(self.sorted_bids)
+        if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 0.50:
             return self.sent_bids[-1][0]
-        if self.progress.get(time() * 1000) > 98:
+        if self.progress.get(time() * 1000) > 0.98:
             max = 0
             bid = None
             for b, t in self.received_bids:
@@ -264,7 +265,7 @@ class TemplateAgent(DefaultParty):
         if agent_utility_nash == self.agent_utilities[-1]:
             return self.sent_bids[-1][0]
         for _ in range(500):
-            bid = all_bids.get(randint(0, all_bids.size() - 1))
+            bid = self.sorted_bids[(randint(0, len(self.sorted_bids) - 1))]
             bid_utility = self.profile.getUtility(bid)
             diff = (self.agent_utilities[-1] - bid_utility) / (self.agent_utilities[-1] - agent_utility_nash)
             if abs(diff - utility_diff) < smallest_diff:
@@ -288,7 +289,7 @@ class TemplateAgent(DefaultParty):
         nash_point = 0
         agent_utility_nash, opponent_utility_nash = 0, 0
         for _ in range(500):
-            bid = all_bids.get(randint(0, all_bids.size() - 1))
+            bid = all_bids[(randint(0, len(all_bids) - 1))]
             agent_score = self.profile.getUtility(bid)
             opponent_score = Decimal(self.opponent_model.get_predicted_utility(bid))
             if agent_score * opponent_score > nash_point:
