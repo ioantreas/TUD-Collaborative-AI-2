@@ -34,7 +34,7 @@ from geniusweb.bidspace.pareto.ParetoLinearAdditive import ParetoLinearAdditive
 from .utils.opponent_model import OpponentModel
 
 
-class TemplateAgent(DefaultParty):
+class LeNegotiator(DefaultParty):
     """
     Template of a Python geniusweb agent.
     """
@@ -173,11 +173,11 @@ class TemplateAgent(DefaultParty):
         to perform and send this action to the opponent.
         """
         # check if the last received offer is good enough
-        bid = self.find_bid()
         # print(self.progress.get(time() * 1000))
         if self.last_received_bid is not None:
             self.opponent_utilities.append(Decimal(self.opponent_model.get_predicted_utility(self.last_received_bid)))
             self.received_bids.append((self.last_received_bid, self.progress.get(time() * 1000)))
+        bid = self.find_bid()
         if self.accept_condition(self.last_received_bid, bid):
             # if so, accept the offer
             action = Accept(self.me, self.last_received_bid)
@@ -218,15 +218,22 @@ class TemplateAgent(DefaultParty):
             next_utility = 1
         # print(f"Utility of next bid: {next_utility}")
         # print(f"Utility of offered bid: {current_utility}")
-        ACnext_res = next_utility <= current_utility
+        progress = self.progress.get(time() * 1000)
+        if len(self.received_bids) > 1:
+            last_time_diff = self.sent_bids[-1][1] - self.received_bids[-2][1]
+            if 1 - progress < last_time_diff:
+                # print("Returning true because we do not have enough time to place our own bid")
+                return True
+        ACnext_res = next_utility * Decimal(1 - progress/10) <= current_utility
         if ACnext_res:
+            # print(f"Returning true because our next bid was going to be worse")
             return True
-        else:
-            progress = self.progress.get(time() * 1000)
-            if len(self.received_bids) > 1:
-                last_time_diff = self.received_bids[-1][1] - self.received_bids[-2][1]
-                if 1 - progress < last_time_diff:
+        elif progress < 0.30:
+            if len(self.agent_utilities) > 0:
+                max_agent_bid_so_far = sorted(self.agent_utilities, key=lambda x: x)[-1]
+                if current_utility > max_agent_bid_so_far:
                     return True
+        else:
             if progress > 0.98:
                 agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(self.sorted_bids)
                 return agent_utility_nash-current_utility <= 0.1
@@ -250,19 +257,27 @@ class TemplateAgent(DefaultParty):
         agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(self.sorted_bids)
         # print(f"Agent utiltiy nash: {agent_utility_nash}")
         # print(f"Opponent utiltiy nash: {opponent_utility_nash}")
-        if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 0.50:
-            return self.sent_bids[-1][0]
-        if self.progress.get(time() * 1000) > 0.98:
-            max = 0
-            bid = None
-            for b, t in self.received_bids:
-                if b is None:
-                    continue
-                cu = self.profile.getUtility(b)
-                if cu > max:
-                    bid = b
-                    max = cu
-            return bid
+        if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 0.30:
+            max_index = len(self.sorted_bids) - 1
+            min_index = int(max_index - self.progress.get(time() * 1000)*100)
+            return self.sorted_bids[(randint(min_index, max_index))]
+        progress = self.progress.get(time() * 1000)
+        if len(self.sent_bids) > 1:
+            last_time_diff = self.received_bids[-1][1] - self.sent_bids[-1][1]
+            if 1 - progress < last_time_diff:
+                # print("Giving the agent the best bid they gave us because they won't have time for another bid")
+                # print(f"Last received bid: {self.received_bids[-1][1]}")
+                # print(f"Last sent bid: {self.sent_bids[-1][1]}")
+                max = 0
+                bid = None
+                for b, t in self.received_bids:
+                    if b is None:
+                        continue
+                    cu = self.profile.getUtility(b)
+                    if cu > max:
+                        bid = b
+                        max = cu
+                return bid
         # print(f"Previous opponent utility: {self.opponent_utilities[-1]}")
         # print(f"Second previous opponent utility: {self.opponent_utilities[-2]}")
         utility_diff = (self.opponent_utilities[-2] - self.opponent_utilities[-1]) / (self.opponent_utilities[-2] - opponent_utility_nash)
@@ -298,7 +313,8 @@ class TemplateAgent(DefaultParty):
             bid = all_bids[(randint(0, len(all_bids) - 1))]
             agent_score = self.profile.getUtility(bid)
             opponent_score = Decimal(self.opponent_model.get_predicted_utility(bid))
-            if agent_score * opponent_score > nash_point and agent_score > 0.7:
+            time_dec = Decimal(0.7 - self.progress.get(time() * 1000)/5)
+            if agent_score * opponent_score > nash_point and (agent_score > opponent_score or agent_score > time_dec):
                 nash_point = agent_score * opponent_score
                 agent_utility_nash, opponent_utility_nash = agent_score, opponent_score
         return agent_utility_nash, opponent_utility_nash
