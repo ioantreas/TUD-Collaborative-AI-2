@@ -216,27 +216,29 @@ class LeNegotiator(DefaultParty):
             next_utility = self.profile.getUtility(next_bid)
         else:
             next_utility = 1
+        if len(self.sent_bids) < 1:
+            return current_utility > 0.8
         # print(f"Utility of next bid: {next_utility}")
         # print(f"Utility of offered bid: {current_utility}")
         progress = self.progress.get(time() * 1000)
-        if len(self.received_bids) > 1:
-            last_time_diff = self.sent_bids[-1][1] - self.received_bids[-2][1]
-            if 1 - progress < last_time_diff:
-                # print("Returning true because we do not have enough time to place our own bid")
-                return True
-        ACnext_res = next_utility * Decimal(1 - progress/10) <= current_utility
-        if ACnext_res:
-            # print(f"Returning true because our next bid was going to be worse")
+        multiplicating_factor = Decimal(1 - progress/10)
+        AClast_res = Decimal(self.agent_utilities[-1]) * multiplicating_factor <= current_utility
+        if AClast_res:
             return True
-        elif progress < 0.30:
+        elif progress < 0.75:
             if len(self.agent_utilities) > 0:
                 max_agent_bid_so_far = sorted(self.agent_utilities, key=lambda x: x)[-1]
                 if current_utility > max_agent_bid_so_far:
                     return True
         else:
-            if progress > 0.98:
+            if len(self.received_bids) > 1:
+                last_time_diff = self.received_bids[-1][1] - self.received_bids[-2][1]
+                if 1 - progress < last_time_diff:
+                    print("Returning true because we do not have enough time to place our own bid")
+                    return True
+            if progress > 0.95:
                 agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(self.sorted_bids)
-                return agent_utility_nash-current_utility <= 0.1
+                return agent_utility_nash-current_utility <= 0.15
                 # # Compare to the max of the previous 2%
                 # max_utility = 0
                 # for b, t in self.received_bids:
@@ -257,7 +259,7 @@ class LeNegotiator(DefaultParty):
         agent_utility_nash, opponent_utility_nash = self.calculate_nash_point(self.sorted_bids)
         # print(f"Agent utiltiy nash: {agent_utility_nash}")
         # print(f"Opponent utiltiy nash: {opponent_utility_nash}")
-        if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 0.30:
+        if self.opponent_utilities[-2] == opponent_utility_nash or self.progress.get(time() * 1000) < 0.75:
             max_index = len(self.sorted_bids) - 1
             min_index = int(max_index - self.progress.get(time() * 1000)*100)
             return self.sorted_bids[(randint(min_index, max_index))]
