@@ -179,7 +179,7 @@ class LeNegotiator(DefaultParty):
 
     def my_turn(self):
         """This method is called when it is our turn.
-        It checks if the bid received from the agent is acceptable. If it is, the agent accepts.
+        It checks if the bid received from the opponent is acceptable. If it is, the agent accepts.
         Otherwise, the agent finds a new bid to propose as a counteroffer.
         The chosen action is then sent to the opponent.
         """
@@ -354,7 +354,7 @@ class LeNegotiator(DefaultParty):
         denominator = (self.opponent_model.offer_utilities[-2] - self.opponent_nash_point) + epsilon
         utility_diff = (self.opponent_model.offer_utilities[-2] - self.opponent_model.offer_utilities[-1]) / denominator
 
-        # only make concessions with relative utility between -0.2 and 0.2 to the nash produce
+        # only make concessions with relative utility between -0.2 and 0.2 to the nash product
         utility_diff = Decimal(builtins.max(-0.2, min(utility_diff, 0.2)))
 
         # select the bid that is closest to the mirrored concession to make, from a random pool of 500 bids
