@@ -1,4 +1,5 @@
 from collections import defaultdict
+from decimal import Decimal
 
 from geniusweb.issuevalue.Bid import Bid
 from geniusweb.issuevalue.DiscreteValueSet import DiscreteValueSet
@@ -10,14 +11,19 @@ class OpponentModel:
     def __init__(self, domain: Domain):
         self.offers = []
         self.domain = domain
+        self.offer_utilities = []
 
         self.issue_estimators = {
             i: IssueEstimator(v) for i, v in domain.getIssuesValues().items()
         }
 
-    def update(self, bid: Bid):
-        # keep track of all bids received
-        self.offers.append(bid)
+    def update(self, bid: Bid, progress: float):
+        # keep track of all bids made and the time they were made at
+        self.offers.append((bid, progress))
+
+        # if bid is not none, get its predicted utility and add it to the list
+        if bid is not None:
+            self.offer_utilities.append(self.get_predicted_utility(bid))
 
         # update all issue estimators with the value that is offered for that issue
         for issue_id, issue_estimator in self.issue_estimators.items():
@@ -54,7 +60,7 @@ class OpponentModel:
             [iw * vu for iw, vu in zip(issue_weights, value_utilities)]
         )
 
-        return predicted_utility
+        return Decimal(predicted_utility)
 
 
 class IssueEstimator:
@@ -89,7 +95,7 @@ class IssueEstimator:
         # then the predicted issue weight == 1.0
         equal_shares = self.bids_received / self.num_values
         self.weight = (self.max_value_count - equal_shares) / (
-            self.bids_received - equal_shares
+                self.bids_received - equal_shares
         )
 
         # recalculate all value utilities
