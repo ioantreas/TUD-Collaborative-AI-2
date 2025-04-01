@@ -1,11 +1,13 @@
 import shutil
 from collections import defaultdict
-from itertools import permutations
+from itertools import permutations, product
 from math import factorial, prod
 from pathlib import Path
 from typing import Tuple
 
 import pandas as pd
+import numpy as np
+from geniusweb.issuevalue.Bid import Bid
 from geniusweb.profile.utilityspace.LinearAdditiveUtilitySpace import (
     LinearAdditiveUtilitySpace,
 )
@@ -21,6 +23,7 @@ from pyson.ObjectMapper import ObjectMapper
 from uri.uri import URI
 
 from utils.ask_proceed import ask_proceed
+from scipy.spatial.distance import cdist
 
 
 def run_session(settings) -> Tuple[dict, dict]:
@@ -193,6 +196,20 @@ def process_results(results_class: SAOPState, results_dict: dict):
         else:
             utilities_final = [0, 0]
             result = "failed"
+        if result == "agreement":
+            # Convert utility_funcs dict to ordered list
+            utility_funcs_list = list(utility_funcs.values())
+
+            # Compute Pareto frontier
+            pareto_front = compute_pareto_frontier(utility_funcs_list)
+
+            # Compute Euclidean distance to Pareto frontier
+            final_point = np.array([utilities_final])
+            distances = cdist(final_point, pareto_front)
+            results_summary["distance_from_pareto"] = float(distances.min())
+        else:
+            results_summary["distance_from_pareto"] = 1.0
+
     else:
         utilities_final = [0, 0]
         result = "ERROR"
@@ -233,6 +250,9 @@ def process_tournament_results(tournament_results):
             agent_result_raw[agent_class]["social_welfare"].append(
                 session_results["social_welfare"]
             )
+            agent_result_raw[agent_class]["distance_from_pareto"].append(
+                session_results.get("distance_from_pareto", 1.0)
+            )
             if "num_offers" in session_results:
                 agent_result_raw[agent_class]["num_offers"].append(
                     session_results["num_offers"]
@@ -250,6 +270,7 @@ def process_tournament_results(tournament_results):
         "avg_utility",
         "avg_nash_product",
         "avg_social_welfare",
+        "avg_distance_from_pareto",
         "avg_num_offers",
         "count",
         "agreement",
@@ -278,3 +299,26 @@ def process_tournament_results(tournament_results):
     tournament_results_summary = tournament_results_summary[column_order]
 
     return tournament_results_summary
+
+def compute_pareto_frontier(utility_funcs):
+    # Generate all possible bids (Cartesian product of domain values)
+    issue_values = utility_funcs[0].getDomain().getIssuesValues()
+    all_bids = [
+        dict(zip(issue_values.keys(), values))
+        for values in product(*[issue_values[issue].getValues() for issue in issue_values])
+    ]
+
+    # Compute utilities for all bids
+    utilities = [
+        (float(utility_funcs[0].getUtility(Bid(bid))),
+         float(utility_funcs[1].getUtility(Bid(bid))))
+        for bid in all_bids
+    ]
+
+    # Keep only Pareto-optimal outcomes
+    pareto_points = []
+    for u in utilities:
+        if not any((v[0] >= u[0] and v[1] > u[1]) or (v[0] > u[0] and v[1] >= u[1]) for v in utilities):
+            pareto_points.append(u)
+
+    return np.array(pareto_points)

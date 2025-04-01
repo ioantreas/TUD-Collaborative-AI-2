@@ -18,27 +18,27 @@ if not RESULTS_DIR.exists():
 tournament_settings = {
     "agents": [
         {
-            "class": "agents.group22_agent.group22_agent.TemplateAgent",
+            "class": "agents.group22_agent.group22_agent.LeNegotiator",
             "parameters": {"storage_dir": "agent_storage/group22_agent"},
         },
         {
             "class": "agents.boulware_agent.boulware_agent.BoulwareAgent",
         },
-        # {
-        #     "class": "agents.conceder_agent.conceder_agent.ConcederAgent",
-        # },
+        {
+            "class": "agents.conceder_agent.conceder_agent.ConcederAgent",
+        },
         {
             "class": "agents.hardliner_agent.hardliner_agent.HardlinerAgent",
         },
-        # {
-        #     "class": "agents.linear_agent.linear_agent.LinearAgent",
-        # },
-        # {
-        #     "class": "agents.random_agent.random_agent.RandomAgent",
-        # },
-        # {
-        #     "class": "agents.stupid_agent.stupid_agent.StupidAgent",
-        # },
+        {
+            "class": "agents.linear_agent.linear_agent.LinearAgent",
+        },
+        {
+            "class": "agents.random_agent.random_agent.RandomAgent",
+        },
+        {
+            "class": "agents.stupid_agent.stupid_agent.StupidAgent",
+        },
         {
             "class": "agents.ANL2022.dreamteam109_agent.dreamteam109_agent.DreamTeam109Agent",
             "parameters": {"storage_dir": "agent_storage/DreamTeam109Agent"},
@@ -46,12 +46,12 @@ tournament_settings = {
         {
             "class": "agents.CSE3210.agent2.agent2.Agent2",
         },
-        # {
-        #     "class": "agents.CSE3210.agent3.agent3.Agent3",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent7.agent7.Agent7",
-        # },
+        {
+            "class": "agents.CSE3210.agent3.agent3.Agent3",
+        },
+        {
+            "class": "agents.CSE3210.agent7.agent7.Agent7",
+        },
         {
             "class": "agents.CSE3210.agent11.agent11.Agent11",
         },
@@ -73,27 +73,27 @@ tournament_settings = {
         {
             "class": "agents.CSE3210.agent25.agent25.Agent25",
         },
-        # {
-        #     "class": "agents.CSE3210.agent26.agent26.Agent26",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent27.agent27.Agent27",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent29.agent29.Agent29",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent32.agent32.Agent32",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent33.agent33.Agent33",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent41.agent41.Agent41",
-        # },
-        # {
-        #     "class": "agents.CSE3210.agent43.agent43.Agent43",
-        # },
+        {
+            "class": "agents.CSE3210.agent26.agent26.Agent26",
+        },
+        {
+            "class": "agents.CSE3210.agent27.agent27.Agent27",
+        },
+        {
+            "class": "agents.CSE3210.agent29.agent29.Agent29",
+        },
+        {
+            "class": "agents.CSE3210.agent32.agent32.Agent32",
+        },
+        {
+            "class": "agents.CSE3210.agent33.agent33.Agent33",
+        },
+        {
+            "class": "agents.CSE3210.agent41.agent41.Agent41",
+        },
+        {
+            "class": "agents.CSE3210.agent43.agent43.Agent43",
+        },
         # {
         #     "class": "agents.CSE3210.agent50.agent50.Agent50",
         # },

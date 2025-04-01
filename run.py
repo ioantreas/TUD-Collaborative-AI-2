@@ -25,8 +25,8 @@ settings = {
             "class": "agents.CSE3210.agent18.agent18.Agent18",
         },
         {
-            "class": "agents.group22_agent.group22_agent.TemplateAgent",
-            "parameters": {"storage_dir": "agent_storage/group22_agent"},
+            "class": "agents.group22_agent.group22_agent.LeNegotiator",
+            # "parameters": {"storage_dir": "agent_storage/group22_agent"},
         },
     ],
     "profiles": ["domains/domain00/profileA.json", "domains/domain00/profileB.json"],
