@@ -85,15 +85,15 @@ tournament_settings = {
         {
             "class": "agents.CSE3210.agent32.agent32.Agent32",
         },
-        {
-            "class": "agents.CSE3210.agent33.agent33.Agent33",
-        },
-        {
-            "class": "agents.CSE3210.agent41.agent41.Agent41",
-        },
-        {
-            "class": "agents.CSE3210.agent43.agent43.Agent43",
-        },
+        # {
+        #     "class": "agents.CSE3210.agent33.agent33.Agent33",
+        # },
+        # {
+        #     "class": "agents.CSE3210.agent41.agent41.Agent41",
+        # },
+        # {
+        #     "class": "agents.CSE3210.agent43.agent43.Agent43",
+        # },
         # {
         #     "class": "agents.CSE3210.agent50.agent50.Agent50",
         # },
@@ -121,7 +121,9 @@ tournament_settings = {
     ],
     "profile_sets": [
         ["domains/domain00/profileA.json", "domains/domain00/profileB.json"],
-        ["domains/domain01/profileA.json", "domains/domain01/profileB.json"],
+        ["domains/domain08/profileA.json", "domains/domain08/profileB.json"],
+        ["domains/domain14/profileA.json", "domains/domain14/profileB.json"],
+        ["domains/domain33/profileA.json", "domains/domain33/profileB.json"],
     ],
     "deadline_time_ms": 2000,
 }

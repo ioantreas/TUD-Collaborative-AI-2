@@ -284,10 +284,12 @@ class LeNegotiator(DefaultParty):
         if received_utility < self.reservation_utility:
             return False
 
-        # if we have not yet sent any bids, simply accept if the utility of the received offer is above 0.8 utility
+        # if we have not yet sent any bids, simply accept only if the utility of the received offer is equal to the best offer we can get
         if self.sent_bids is None:
             self.sent_bids = []
-            return received_utility > 0.8
+            if self.sorted_bids:
+                return received_utility == self.sorted_bids[-1]
+            return False
 
         # calculate a multiplication factor that linearly decreases with time, from 0 to 0.9
         progress = self.progress.get(time() * 1000)
