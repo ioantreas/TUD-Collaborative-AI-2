@@ -1,0 +1,92 @@
+{
+    "sessions": [
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.0033333333333333335,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1,
+            "isGood": false,
+            "progressAtFinish": 0.884193115234375,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.3073820802
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1,
+            "isGood": false,
+            "progressAtFinish": 0.7619158935546875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.3122175916
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1,
+            "isGood": false,
+            "progressAtFinish": 0.951533447265625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.2781806367
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1,
+            "isGood": false,
+            "progressAtFinish": 0.8533671875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.5877612523
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 1,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 0.4847822265625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.7557509511
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 0.984213623046875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.4470657322
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 0.970140380859375,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.4525222272
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 0.8288231201171875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.834561584
+        }
+    ]
+}

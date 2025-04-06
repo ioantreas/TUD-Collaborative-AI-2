@@ -1,0 +1,68 @@
+{
+    "sessions": [
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.0033333333333333335,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.9760667724609375,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.4561621662
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.9489442138671875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.9531641594
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.928957275390625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.8409884355
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.9567008056640625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.93143
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.9098175048828125,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.9872420507
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.88472265625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.8815979149
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.43926416015625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.885506504
+        }
+    ]
+}

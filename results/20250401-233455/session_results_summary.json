@@ -1,0 +1,11 @@
+{
+  "num_offers": 125,
+  "distance_from_pareto": 0.11292071531199173,
+  "agent_1": "LeNegotiator4",
+  "utility_1": 0.2618066012,
+  "agent_2": "LeNegotiator5",
+  "utility_2": 0.874709756,
+  "nash_product": 0.2290047882548413,
+  "social_welfare": 1.1365163572,
+  "result": "agreement"
+}

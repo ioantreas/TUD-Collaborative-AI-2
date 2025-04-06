@@ -1,0 +1,1502 @@
+[
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain00/profileA.json",
+      "domains/domain00/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain08/profileA.json",
+      "domains/domain08/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain14/profileA.json",
+      "domains/domain14/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain33/profileA.json",
+      "domains/domain33/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator5"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator4"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator3"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  },
+  {
+    "agents": [
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator1"
+      },
+      {
+        "class": "agents.group22_agent.group22_agent.LeNegotiator2"
+      }
+    ],
+    "profiles": [
+      "domains/domain01/profileA.json",
+      "domains/domain01/profileB.json"
+    ],
+    "deadline_time_ms": 2000
+  }
+]

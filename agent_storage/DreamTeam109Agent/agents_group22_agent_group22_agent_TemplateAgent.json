@@ -1,0 +1,12 @@
+{
+    "sessions": [
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.98645185546875,
+            "topBidsPercentage": 0.0033333333333333335,
+            "utilityAtFinish": 0.9453143368
+        }
+    ]
+}

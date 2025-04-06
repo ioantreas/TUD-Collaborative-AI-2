@@ -1,0 +1,11 @@
+{
+  "num_offers": 112,
+  "distance_from_pareto": 1.0,
+  "agent_1": "LeNegotiator2",
+  "utility_1": 0,
+  "agent_2": "LeNegotiator5",
+  "utility_2": 0,
+  "nash_product": 0,
+  "social_welfare": 0,
+  "result": "failed"
+}

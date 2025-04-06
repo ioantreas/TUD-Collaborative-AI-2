@@ -1,0 +1,124 @@
+{
+    "sessions": [
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.0033333333333333335,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.980330078125,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.5787971571
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.8579327392578125,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.8318533696
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.820667236328125,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.9712429215
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.9799169921875,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.5142312623
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.9641463623046875,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.5787971571
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.960075439453125,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.5354605683
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.9699849853515625,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0.474478944
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.999646484375,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.5872007999
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.979669189453125,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.6445281788
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.9771004638671875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.7320742883
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.7209732666015625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.967672872
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.9538209228515625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.7293439039
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 0.9447593994140625,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.8353134256
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": true,
+            "progressAtFinish": 0.72498388671875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.8815979149
+        }
+    ]
+}

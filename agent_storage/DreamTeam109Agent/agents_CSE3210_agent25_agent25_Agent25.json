@@ -1,0 +1,68 @@
+{
+    "sessions": [
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.0033333333333333335,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 0,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.01,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": false,
+            "forceAcceptAtRemainingTurns": 1,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.4232004092
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 1,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.5106820036
+        },
+        {
+            "didAccept": true,
+            "forceAcceptAtRemainingTurns": 1.1,
+            "isGood": false,
+            "progressAtFinish": 0.88134716796875,
+            "topBidsPercentage": 0.03333333333333333,
+            "utilityAtFinish": 0.834561584
+        }
+    ]
+}
